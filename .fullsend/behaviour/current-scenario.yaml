@@ -1,0 +1,12 @@
+ops:
+    - description: Check out decoy branch
+      op: checkout_branch
+      args: agent/990000099-decoy
+    - description: Emit code JSON
+      op: write_fixture
+      args: output/agent-result.json, fixtures/code/implemented.json
+      content: |
+        {
+          "target_branch": "main",
+          "pr_body": "Automated behaviour-test implementation emitted by the scripted code run."
+        }
